@@ -24,8 +24,11 @@ class _HomeScreenState extends State<HomeScreen> {
   GlobalKey table = GlobalKey();
 
   void showTutorial()
-  { if (mounted) {
-    tutorialCoachMark.show(context: context);
+  async { if (mounted) {
+   await Future.delayed(Duration(seconds: 2)).whenComplete((){
+     tutorialCoachMark.show(context: context);
+   });
+
   }
   }
 
